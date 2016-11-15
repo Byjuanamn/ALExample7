@@ -20,25 +20,25 @@ class ViewController: UIViewController {
         
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.borderStyle = .RoundedRect
+        textField.borderStyle = .roundedRect
         view.addSubview(textField)
         
         let lookupButton = UIButton()
         lookupButton.translatesAutoresizingMaskIntoConstraints = false
-        lookupButton.setTitle("Lookup!", forState: .Normal)
-        lookupButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        lookupButton.setTitleColor(UIColor.blueColor(), forState: .Highlighted)
+        lookupButton.setTitle("Lookup!", for: UIControlState())
+        lookupButton.setTitleColor(UIColor.black, for: UIControlState())
+        lookupButton.setTitleColor(UIColor.blue, for: .highlighted)
         view.addSubview(lookupButton)
         
-        NSLayoutConstraint(item: searchLabel, attribute: .Leading, relatedBy: .Equal, toItem: view, attribute: .LeadingMargin, multiplier: 1.0, constant: 0.0).active = true
-        NSLayoutConstraint(item: searchLabel, attribute: .Baseline, relatedBy: .Equal, toItem: textField, attribute: .Baseline, multiplier: 1.0, constant: 0.0).active = true
+        NSLayoutConstraint(item: searchLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leadingMargin, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: searchLabel, attribute: .lastBaseline, relatedBy: .equal, toItem: textField, attribute: .lastBaseline, multiplier: 1.0, constant: 0.0).isActive = true
         
-        NSLayoutConstraint(item: view, attribute: .TrailingMargin, relatedBy: .Equal, toItem: textField, attribute: .Trailing, multiplier: 1.0, constant: 0.0).active = true
-        NSLayoutConstraint(item: textField, attribute: .Top, relatedBy: .Equal, toItem: topLayoutGuide, attribute: .Bottom, multiplier: 1.0, constant: 20.0).active = true
-        NSLayoutConstraint(item: textField, attribute: .Leading, relatedBy: .Equal, toItem: searchLabel, attribute: .Trailing, multiplier: 1.0, constant: 8.0).active = true
+        NSLayoutConstraint(item: view, attribute: .trailingMargin, relatedBy: .equal, toItem: textField, attribute: .trailing, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: textField, attribute: .top, relatedBy: .equal, toItem: topLayoutGuide, attribute: .bottom, multiplier: 1.0, constant: 20.0).isActive = true
+        NSLayoutConstraint(item: textField, attribute: .leading, relatedBy: .equal, toItem: searchLabel, attribute: .trailing, multiplier: 1.0, constant: 8.0).isActive = true
         
-        NSLayoutConstraint(item: lookupButton, attribute: .Top, relatedBy: .Equal, toItem: textField, attribute: .Bottom, multiplier: 1.0, constant: 8.0).active = true
-        NSLayoutConstraint(item: lookupButton, attribute: .Trailing, relatedBy: .Equal, toItem: textField, attribute: .Trailing, multiplier: 1.0, constant: 0.0).active = true
+        NSLayoutConstraint(item: lookupButton, attribute: .top, relatedBy: .equal, toItem: textField, attribute: .bottom, multiplier: 1.0, constant: 8.0).isActive = true
+        NSLayoutConstraint(item: lookupButton, attribute: .trailing, relatedBy: .equal, toItem: textField, attribute: .trailing, multiplier: 1.0, constant: 0.0).isActive = true
     }
 
 
